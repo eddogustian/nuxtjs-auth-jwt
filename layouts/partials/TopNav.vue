@@ -13,7 +13,7 @@
 
           <!-- Right aligned nav items -->
           <b-navbar-nav class="ml-auto">
-            <nuxt-link class="nav-link" to="auth//login">Login</nuxt-link>
+            <nuxt-link class="nav-link" to="auth/login">Login</nuxt-link>
             <nuxt-link class="nav-link" to="auth/register">Register</nuxt-link>
           </b-navbar-nav>
         </b-collapse>
