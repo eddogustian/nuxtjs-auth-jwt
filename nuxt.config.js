@@ -36,6 +36,26 @@ export default {
   */
   plugins: [
   ],
+
+  auth: {
+    strategies: {
+      local: {
+        endpoints: {
+          login: {
+            url: 'auth/login', method: 'post', propertyNam: 'token'
+          },
+          user: {
+            url: 'me', method: 'get', propertyName: 'data'
+          },
+          logout: 'logout', method: 'get'
+        }
+      }
+    },
+    redirect: {
+      login: '/auth/login',
+      home: '/'
+    }
+  },
   /*
   ** Auto import components
   ** See https://nuxtjs.org/api/configuration-components
@@ -52,11 +72,19 @@ export default {
   modules: [
     // Doc: https://bootstrap-vue.js.org
     'bootstrap-vue/nuxt',
+    '@nuxtjs/axios',
+    '@nuxtjs/auth',
   ],
+  axios: {
+    // proxyHeaders: false
+    baseURL: "http://127.0.0.1/api"
+  },
   /*
   ** Build configuration
   ** See https://nuxtjs.org/api/configuration-build/
   */
   build: {
+    extractCSS: true,
+    extend(config, ctx) { }
   }
 }

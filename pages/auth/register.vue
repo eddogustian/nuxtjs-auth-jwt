@@ -25,7 +25,7 @@
               />
             </div>
             <div class="form-group">
-              <input type="submit" value="register" class="btn btn-default w-100" />
+              <input type="submit" value="register" class="btn btn-primary w-100" />
             </div>
           </form>
         </div>
