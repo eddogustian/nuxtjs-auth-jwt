@@ -42,7 +42,7 @@ export default {
       local: {
         endpoints: {
           login: {
-            url: 'auth/login', method: 'post', propertyNam: 'token'
+            url: 'auth/login', method: 'post', propertyName: 'token'
           },
           user: {
             url: 'me', method: 'get', propertyName: 'data'
@@ -56,6 +56,7 @@ export default {
       home: '/'
     }
   },
+
   /*
   ** Auto import components
   ** See https://nuxtjs.org/api/configuration-components
@@ -77,7 +78,7 @@ export default {
   ],
   axios: {
     // proxyHeaders: false
-    baseURL: "http://127.0.0.1/api"
+    baseURL: "http://127.0.0.1:8000/api"
   },
   /*
   ** Build configuration
